@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta charset="UTF-8">
+  <title>=== AutoBiografy ===</title>
+  <style>
+      * {
+         box-sizing: border-box;
+
+      }
+      hr {
+        margin: 0;
+      }
+      body {
+
+        margin: 0;
+        padding: 0;
+        background-color: rgb(255, 255, 255);
+      }
+      .top-container {
+         margin: 0;
+         height: 100px;
+         width: 100%;
+         background-color: #9b795a;
+      }
+      .header_left {
+        font-family: 'Preahvihear', sans-serif;
+         font-size: 18px;
+         line-height: 120px;
+         float: left;
+         width: 15%;
+         color: white;
+         text-align: center;
+         text-shadow: 0 0 5px #ffffff85;
+         margin-left: 0px;
+         height: 100px;
+      }
+      .header_left * {
+         padding-left: 10px;
+      }
+      .header_center {
+        position: relative;
+        color: white;
+        float: left;
+        width: 15%;
+        height: 100px;
+        background-color: #ffffff00;
+        border: none;
+      }
+
+      .header_centers {
+        text-shadow: 0 0 5px #ffffff85;
+        background-image: url(slide2.jpg);
+        background-repeat: round;
+        background-size: 100%;
+        position: relative;
+
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        float: left;
+        width: 27.5%;
+        height: 100px;
+        border: 3px #FFD700;
+        border-style: ridge;
+        opacity: 0;
+        transition: 0.5s;
+
+      }
+      .text_adv {
+        border-radius: 5px;
+        background-color: rgba(32, 32, 32, 0.5);
+        padding: 5px 10px;
+      }
+
+      .header_in {
+        text-decoration: none;
+        text-shadow: 0 0 5px #ffffff85;
+        color: white;
+      }
+      @keyframes blink {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+
+
+
+      .logo-container {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+}
+
+.logo {
+  z-index: 0;
+  position: absolute;
+  top: 0px;
+  left: 45%;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.397); 
+
+  opacity: 0;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  cursor: default;
+  transform: rotate(0deg);
+}
+
+.header_center:hover .logo {
+  left: 5%;
+  opacity: 1;
+  cursor: default;
+  /*transform: rotate(-720deg);*/
+  transition: 0.5s;
+}
+
+.text {
+  font-size: 20px;
+  font-family: 'Preahvihear', sans-serif;
+  text-align: center;
+  margin-top: 10px;
+  cursor: default;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header_center:hover .text {
+  transform: translateX(35px);
+  transition: 0.5s;
+  cursor: default;
+}
+
+.text2 {
+  margin-left: -10px;
+  font-size: 15px;
+  font-family: 'Preahvihear', sans-serif;
+  text-align: center;
+  line-height: 10px;
+  left: 50%;
+  opacity: 0;
+  cursor: default;
+  transition: transform 0.3s ease-in-out;
+  transition: 0.5s;
+}
+
+.header_center:hover .text2 {
+  transform: translateX(45px);
+  transition: 0.5s;
+  cursor: default;
+  opacity: 1;
+}
+
+.button:hover {
+    font-size: 17px;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #9b795a; /* Цвет подчеркивания */
+    transition: width 0.5s; /* Плавное изменение ширины подчеркивания */
+}
+
+.button:hover::before {
+    width: 100%; /* Полная ширина подчеркивания при наведении */
+}
+
+
+
+      .header_right{
+        font-family: 'Preahvihear', sans-serif;
+         font-size: 18px;
+         line-height: 120px;
+         float: right;
+         width: 15%;
+         color: white;
+         text-align: center;
+         text-shadow: 0 0 10px #ffffff85;
+         margin-left: 0px;
+         height: 100px;
+      }
+      .header_right * {
+         padding-left: 10px;
+      }
+
+
+
+      header {
+        box-sizing: border-box;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transition: background-color 0.5s ease;
+        z-index: 100;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.37);
+      }
+
+
+      section {
+        z-index: 1;
+        height: 100vh;
+        display: flex;
+        font-size: 24px;
+        
+        background-color: white;
+      }
+      
+
+.button {
+  font-size: 15px;
+  font-family: 'Cinzel', serif;
+  border: none;
+  color: gray;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  height: 50px;
+  width: 26%;
+  margin: -1px;
+  transform: skew(-20deg, 0);
+  background-color: white;
+}
+
+.button:first-child {
+  transform: skew(0);
+  content: '';
+}
+
+.button:last-child {
+  transform: skew(0);
+  z-index: -1;
+  content: '';
+  margin-left: -10px;
+}
+.button span {
+  display: block;
+  transform: skew(20deg, 0);
+}
+
+
+
+
+
+      .scrolled {
+        position: fixed;
+        top: 0;
+
+      }
+      .active {
+        color: white;
+        background-color: #9b795a;
+      }
+
+      .logo {
+        width: 100px;
+      }
+
+      
+      
+      .setting {
+        transition: 1s;
+        transform: rotate(0deg)
+}
+      .setting:hover {
+        transform: rotate(360deg) scale(1.5);
+        cursor: pointer;
+      }
+
+      .rightcon {
+        transform: rotate(0deg);
+        transition: 1s;
+      } 
+      .rightcon:hover {
+        transform: rotateX(360deg) scale(1.5);
+        cursor: pointer;
+      }
+      .center {
+        float: left;
+      }
+
+
+
+
+
+
+
+
+      .section1 {
+        align-items: center;
+        justify-content: center;
+        height: 740px;
+        background-image: url(mountain.jpg);
+        background-size: 120%;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+      }
+      .section11{
+        backdrop-filter: grayscale(1) brightness(0.5);
+        height: 740px;
+        width: 100%;
+        position: absolute;
+      }
+      .palalax {
+  height: 350px;
+  width: 40%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+  position: relative;
+  transition: transform 0.3s ease-out;
+  color: white;
+  align-items: center;
+
+}
+      .paralaxtext {
+        text-align: center;
+        margin: 10px;
+
+      }
+
+
+
+
+      .buy {
+        margin-top: 20px;
+        width: 30%;
+        height: 50px;
+        border-radius: 12px;
+        background-color: rgba(100, 100, 100, 0.479);
+        border-style: dashed;
+        cursor: pointer;
+        backdrop-filter: blur(3px);
+        font-family: 'Ubuntu', sans-serif;
+        color: #eea969;
+        transition: 0.4s;
+        border-color: #9b795a;
+      }
+      .buy:hover {
+        border-color: white;
+        color: white;
+        transition: 0.2s;
+        backdrop-filter: blur(3px);
+        transform: scale(1.1);
+
+      }
+      .section2 {
+        background-color: white;
+        size: 50%;
+        height: 1100px;
+        background-size: 100%;
+        box-sizing: border-box;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+      }
+      .section2_up {
+        box-sizing: border-box;
+        width: 70%;
+        margin: 0 auto;
+        height: 400px;
+        display: flex; /* Чтобы стояло в одном ряду  */
+        margin-bottom: 50px;
+      }
+
+      .section2_up_left {
+        padding: 10px;
+        width: 40%;
+        height: 100%;
+        background-image: url(hlweb.jpg);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+      }
+
+      .section2_up_right {
+        margin-left: 15px;
+        padding: 35px;
+        width: 60%;
+        height: 100%;
+
+      }
+
+      .section2_down {
+        box-sizing: border-box;
+        width: 70%;
+        margin: 0 auto;
+        height: 400px;
+        display: flex; /* Чтобы стояло в одном ряду  */
+
+      }
+      .section2_down_left {
+        margin-left: 15px;
+        padding: 35px;
+        width: 60%;
+        height: 100%;
+      }
+      .section2_down_right {
+        padding: 10px;
+        width: 40%;
+        height: 480px;
+        background-image: url(hlwebdown.jpg);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+
+      .section3 {
+        background-image: url(back2.jpg);
+        size: 50%;
+        height: 900px;
+        background-size: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+
+
+      .fade-in-element {
+  opacity: 0;
+  transform: translateY(20px); /* Начальное смещение по вертикали */
+  transition: opacity 1s ease 0.5s, transform 1s ease 0.5s; /* Добавляем задержку 0.5s */
+}
+
+/* Анимация для появления с плавным затуханием */
+.fade-in-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.texttt {
+  letter-spacing: 2px; 
+  font-size: 14px; 
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+.hh {
+  font-size: 50px;
+  font-weight: 100;
+  padding-bottom: 70px;
+}
+
+.container_s3 {
+  width: 65%;
+  height: 500px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.cont_s3_left {
+  width: 33.33%;
+  background-color: white;
+  height: 85%;
+  float: left;
+}
+.cont_s3_center {
+  width: 33.33%;
+  background-color: #9b795a;
+  height: 100%;
+  float: left;
+}
+.cont_s3_right {
+  width: 33.33%;
+  background-color: white;
+  height: 85%;
+  float: left;
+}
+.button_s3 {
+  border: 0;
+  height: 40px;
+  width: 40%;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  letter-spacing: 2px; 
+  font-weight: 900;
+  font-size: 12px;
+}
+.but_cont {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+.img1 {
+  height: 185px;
+  width: 275px;
+  
+}
+
+.cont_img {
+  display: flex;
+  justify-content: center;
+}
+
+.but_contimg {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.button_img {
+  border: 0;
+  height: 40px;
+  width: 40%;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  background-color: #9b795a;
+  color: white;
+  letter-spacing: 2px; 
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.section4 {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+.cont_s4 {
+  padding-top: 100px;
+  margin: 0 auto;
+  width: 65%;
+  height: 60%;
+  box-sizing: border-box;
+}
+.div_s4_left {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  float: left;
+  height: 100%;
+
+}
+.div_s4_right {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.recett {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: 40%;
+  width: 6%;
+  position: absolute;
+  background-color: #9b795a;
+  display: flex;
+  flex-direction: column;
+}
+.recett div {
+  flex: 1;
+}
+.centerr {
+  text-align: center;
+}
+.number {
+  font-family: 'Gilda Display', serif;
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+}
+.textn {
+  margin: 0;
+}
+
+
+
+
+
+.cont_s5_up {
+  width: 100%;
+  height: 600px;
+  background-color: red;
+  box-sizing: border-box;
+}
+
+.img_left {
+  background-image: url(contact.jpg);
+  background-size: 120%;
+  background-repeat: no-repeat;
+  width: 50%;
+  float: left;
+  height: 100%;
+}
+.img_right {
+  background-image: url(maps.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+.gray {
+  color: gray;
+}
+
+.bord_s4 {
+  width: 70%;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #9b795a;
+  padding: 5px;
+  margin: 5px 0;
+}
+.cont_s4_bottom {
+  width: 80%;
+  height: 200px;
+  margin: 70px auto;
+  display: flex;
+  box-sizing: border-box;
+  columns: 4;
+}
+.cont_s4_bottom .gg {
+  width: 25%;
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.icon_gg {
+  font-size: 60px;
+}
+
+
+.img_center {
+  margin-top: 170px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px; /* Задайте ширину контейнера по вашему выбору */
+  height: 300px; /* Задайте высоту контейнера по вашему выбору */
+  background-color: rgba(0, 0, 255, 0.5); /* Прозрачный синий цвет (для демонстрации) */
+    
+}
+.imgcenterin {
+  background-color: #9b795a;
+  height: 100%;
+  width: 100%;
+}
+.section5 {
+  background-color: #9b795a;
+  height: 700px;
+  display: flex;
+        flex-direction: column;
+}
+.white {
+  color: white;
+}
+.ggf {
+  margin: 0 35px;
+  display: flex;
+  align-items: center; /* Выравнивание элементов по центру по вертикали */
+}
+.button_contacts {
+  border: 0;
+  height: 40px;
+  width: 75%;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  letter-spacing: 2px; 
+  font-weight: 900;
+  font-size: 12px;
+}
+.but_contcont {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.cont_s5_down {
+  height: 100px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.cont_s5_down * {
+  padding: 0 10px;
+}
+.changeable {
+  background-color: white;
+  color: black
+}
+.buttt {
+  border: 0;
+  background: none;
+}
+   </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+  
+   <div class="top-container">
+      <div class="header_left">
+         <span class="header_in"><i class="material-icons setting" style="font-size:36px">settings</i></span>
+         <span class="header_in"><i class="material-icons setting" style="font-size:36px">search</i></span>
+         <button class="buttt" id="colorButton"><span class="header_in"><i class="material-icons setting" style="font-size:36px">invert_colors</i></span></button>  
+      </div>
+      
+  <div class="header_centers">
+
+  </div>
+
+      <button class="header_center" data-index="2">
+        <div class="text">Mountains</div>
+        <div class="text2">about hotel...</div>
+        <div class="logo"><i class="material-icons" style="font-size:106px">terrain</i></div>
+      </button>
+
+
+  <div class="header_centers">
+
+  </div>
+
+
+      <div class="header_right">
+         <span class="rightcon2"><i class="material-icons rightcon">discord</i></span>
+         <span class="rightcon2"><i class="material-icons rightcon">telegram</i></span>
+         <span class="rightcon2"><i class="material-icons rightcon">facebook</i></span>
+         <span class="rightcon2"><i class="material-icons rightcon">mail_outline</i></span>
+         <span class="rightcon2"><i class="material-icons rightcon">phone</i></span>
+      </div>
+   </div>
+
+
+   <header class="changeable" id="main-header">
+      <button data-index="1" class="button" style="margin-right: -10px;">Hello!</button>
+      <button data-index="2" class="button" style="margin-right: -1px;"><span>About hotel</span></button>
+      <button data-index="3" class="button" style="margin-right: -1px;"><span>Advantages</span></button>
+      <button data-index="4" class="button" style="margin-right: -1px;"><span>Possibilities</span></button>
+      <button data-index="5" class="button" style="margin-right: -0px;">Contacts</button>
+   </header>
+
+   <div class="top_animate"></div>
+
+   
+  <section id="section1" style="margin-top: 10px;" class="section1">
+    <div class="section11">
+
+    </div>
+    <div class="palalax fade-in-element">
+<div class="paralaxtext" style="font-size: 15px; font-family: 'Noto Sans', sans-serif;">Great place to stay
+  <hr style="margin-top: 20px; width: 45px;">
+  <i class="material-icons" style="text-shadow: 0 0 2px black; color: #ad7c4e; font-size:26px; margin-left: 45px; margin-top: -10px; ">terrain</i>
+  <hr style="width: 45px; float: right;">
+</div>
+<div class="paralaxtext" style="color: white;margin-top: -50px;font-size: 90px; font-family: 'Preahvihear', sans-serif;">Mountains</div>
+<div style="font-size: 15px; font-family: 'Noto Sans', sans-serif;">WOODEN HOUSES ǀ HOT SPRINGS</div>
+<button class="buy">RESERVATION</button>
+      
+      
+
+    
+    </div>
+
+  </section>
+
+  <section id="section2" class="section2 changeable">
+      <div class="section2_up">
+        <div class="section2_up_left fade-in-element">
+
+        </div>
+        <div class="section2_up_right">
+          <p class="fade-in-element" style="letter-spacing: 2px; font-size: 12px; font-family: 'Poppins', sans-serif;">In the foothills of the Mayami Mountains</p>
+          <p class="fade-in-element" style="color: rgb(77, 77, 77);margin-top: -10px ;font-size: 75px; font-family: 'Poppins', sans-serif;">Experience the joys of nature.</p>
+          <p class="fade-in-element" style="line-height: 2.3; margin-top: -60px;letter-spacing: 2px; font-size: 12px; font-family: 'Poppins', sans-serif;">Welcome to our serene guesthouse in a stunning natural setting, offering peace away from city life. Immerse yourself in a picturesque area, where natural beauty abounds, providing the perfect backdrop for exploration. Enjoy our comfy rooms with nature views, and let us cater to your every comfort and desire.
+
+
+
+
+
+
+
+
+
+
+
+            </p>
+        </div>
+      </div>
+      
+      <div class="section2_down">
+        <div class="section2_down_left">
+          <p class="fade-in-element" style="letter-spacing: 2px; font-size: 12px; font-family: 'Poppins', sans-serif;">Accommodation in a guesthouse or cottage?</p>
+          <p class="fade-in-element" style="color: rgb(77, 77, 77);margin-top: 10px ;font-size: 60px;font-weight: 900; font-family: 'Poppins', sans-serif;">
+            Comfortable rooms and log cabins.</p>
+          <p class="fade-in-element" style="line-height: 2.3; margin-top: -40px;letter-spacing: 2px; font-size: 12px; font-family: 'Poppins', sans-serif;">Welcome to our cozy guesthouse in a beautiful natural setting, where you can experience peace and tranquility away from the hustle and bustle of the city. You find yourself in a picturesque region full of natural beauty, allowing you to admire the wonders of nature while also exploring many attractions. We offer comfortable and snug rooms with a view of the surrounding nature. Our services are focused on ensuring your maximum comfort and convenience, and we are ready to fulfill all your wishes.</p>
+        </div>
+
+        <div class="section2_down_right fade-in-element">
+          
+        </div>
+      </div>
+  </section>
+
+  <section id="section3" class="section3">
+    <p class="texttt fade-in-element" style="margin: 0 auto; padding-top: 100px ;">Planning a wedding in nature?</p>
+    <h1 class="texttt hh fade-in-element" style="margin: 0 auto; padding-top: 30px ;">Ideal location for a wedding ceremony.</h1>
+    <div class="container_s3 fade-in-element">
+
+      <div class="cont_s3_left fade-in-element changeable">
+        <p class="texttt" style="color: rgb(90, 90, 90); font-size: 30px; text-align: center; letter-spacing: 1px; padding-top: 20px;">Wedding tent.</p>
+        
+       <div class="cont_img">
+        <img src="Navrhova-plocha-1.jpg" class="img1">
+       </div> 
+
+       <div class="but_contimg fade-in-element">
+        <button class="button_img">
+          SHOW MORE
+        </button>
+        </div>
+
+      </div>
+
+
+      <div class="cont_s3_center fade-in-element">
+        <p class="texttt fade-in-element" style="line-height: 2; padding: 40px; text-align: center">
+          Are you searching for suitable venues for a wedding ceremony, reception, or a intimate wedding lunch with your closest ones? We are delighted to handle the complete organization of your wedding day from start to finish. We offer the option to host your event at our guesthouse – either in the comfortable restaurant, the cozy lounge for smaller groups, or in a large-capacity tent for weddings with over 40 guests, which is also suitable for the autumn season.</p>
+
+        <div class="but_cont fade-in-element">
+        <button class="button_s3 changeable">
+          SHOW MORE
+        </button>
+        </div>
+
+      </div>
+
+
+      <div class="cont_s3_right fade-in-element changeable">
+        <p class="texttt fade-in-element" style="color: rgb(90, 90, 90); font-size: 30px; text-align: center; letter-spacing: 1px; padding-top: 20px;">
+          Catering service</p>
+        
+       <div class="cont_img">
+        <img src="Navrhova-plocha1.jpg" class="img1">
+       </div> 
+
+       <div class="but_contimg fade-in-element">
+        <button class="button_img">
+          SHOW MORE
+        </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="section4" class="section4 changeable">
+    <div class="cont_s4">
+
+      <div class="div_s4_left">
+        <img src="hotel.jpg" style="height: 360px; width: 500px;" class="fade-in-element">
+        <div class="recett fade-in-element">
+          <div>
+            <p class="texttt centerr number">58</p>
+            <p class="texttt centerr textn">
+              ROOMS</p>
+          </div>
+          <div>
+            <p class="texttt centerr number">8</p>
+            <p class="texttt centerr textn">COTTAGES</p>
+          </div>
+          <div>
+            <p class="texttt centerr number">16</p>
+            <p class="texttt centerr textn">BEDS</p>
+          </div>
+          <div>
+            <p class="texttt centerr number">1</p>
+            <p class="texttt centerr textn">SPA SALON</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="div_s4_right">
+        <p class="texttt gray fade-in-element" style="margin: 0; font-size: 12px;">EVERYTHING YOU NEED FOR RELAXATION</p>
+        <h1 class="texttt hh fade-in-element" style="margin: 0 auto; padding: 0; color: gray;">Extensive facilities</h1>
+        <p class="texttt gray fade-in-element" style="font-size: 13px; line-height: 2; font-weight: 100;">For comfort and leisure, our guests have access to more than just rooms, including a wellness center, pool, sauna, tennis court, and much more. All our services are focused on your comfort and convenience, ensuring you enjoy an unforgettable vacation in the beautiful surroundings.
+
+
+
+
+
+        </p>
+      
+        <div class="bord_s4 fade-in-element">
+          <p class="texttt" style="padding: 0; margin: 0 10px;">Relaxation zone with loungers and umbrellas</p>
+        </div>
+        <div class="bord_s4 fade-in-element">
+          <p class="texttt" style="padding: 0; margin: 0 10px;">Outdoor hot tub for up to 8 people</p>
+        </div>
+        <div class="bord_s4 fade-in-element">
+          <p class="texttt" style="padding: 0; margin: 0 10px;">Outdoor sauna</p>
+        </div>
+        <div class="bord_s4 fade-in-element">
+          <p class="texttt" style="padding: 0; margin: 0 10px;">Universal beach court with loungers</p>
+        </div>
+        <div class="bord_s4 fade-in-element">
+          <p class="texttt" style="padding: 0; margin: 0 10px;">Children's playground with climbing frames and a sandbox</p>
+        </div>
+      </div>
+
+    
+
+    </div>
+    <div class="cont_s4_bottom fade-in-element">
+      <div class="gg">
+        <i class="material-icons icon_gg gray" style="padding: 10px;">directions_car</i>
+          <div>
+            <p class="texttt gray" style="font-size: 20px; font-weight: 900; margin: 5px 0 5px 0;">Parking lot</p>
+            <p class="texttt gray" style="margin: 5px 0 5px 0px;">+20 parking spaces</p>
+          </div>
+      </div>
+
+      <div class="gg">
+        <i class="material-icons icon_gg gray" style="padding: 10px;">directions_bike</i>
+          <div>
+            <p class="texttt gray" style="font-size: 20px; font-weight: 900; margin: 5px 0 5px 0;">Storage facility</p>
+            <p class="texttt gray" style="margin: 5px 0 5px 0px;">We can store bicycles and skis</p>
+          </div>
+      </div>
+
+      <div class="gg">
+        <i class="material-icons icon_gg gray" style="padding: 10px;">child_friendly</i>
+          <div>
+            <p class="texttt gray" style="font-size: 20px; font-weight: 900; margin: 5px 0 5px 0;">Playground</p>
+            <p class="texttt gray" style="margin: 5px 0 5px 0px;">Climbing frames and a sandbox
+
+            </p>
+          </div>
+      </div>
+
+      <div class="gg">
+        <i class="material-icons icon_gg gray" style="padding: 10px;">restaurant</i>
+          <div>
+            <p class="texttt gray" style="font-size: 20px; font-weight: 900; margin: 5px 0 5px 0;">Restaurant</p>
+            <p class="texttt gray" style="margin: 5px 0 5px 0px;">Local cuisine</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+   <section id="section5" class="section5">
+      <div class="cont_s5_up">
+        <div class="img_left">
+
+        </div>
+        
+        <div class="img_center">
+          <div class="imgcenterin">
+            <p class="texttt fade-in-element" style="margin-top: 0px; margin-bottom: 0px; padding-top: 20px; font-size: 30px; text-align: center;">
+              Mountain hotel
+            </p>
+            <div class="ggf fade-in-element">
+              <i class="material-icons white" style="font-size:26px; padding: 10px;">place</i>
+                <div>
+                  <p class="texttt white" style="font-size: 12px; font-weight: 900; margin: 5px 0 5px 0;">Parkoviště</p>
+
+                </div>
+            </div>
+            <div class="ggf fade-in-element">
+              <i class="material-icons white" style="font-size:26px; padding: 10px;">local_phone</i>
+                <div>
+                  <p class="texttt white" style="font-size: 12px; font-weight: 900; margin: 5px 0 5px 0;">+420-777-777-7</p>
+
+                </div>
+            </div>
+            <div class="ggf fade-in-element">
+              <i class="material-icons white" style="font-size:26px; padding: 10px;">email</i>
+                <div>
+                  <p class="texttt white" style="font-size: 12px; font-weight: 900; margin: 5px 0 5px 0;">777@777.777</p>
+
+                </div>
+            </div>
+            <div class="but_contcont fade-in-element">
+            <button class="button_contacts changeable">Write</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="img_right">
+          
+        </div>
+      </div>
+
+      <div class="cont_s5_down">
+          <a href="https://discord.com/"><i class="material-icons white">discord</i></a>
+          <a href="https://web.telegram.org/"><i class="material-icons white">telegram</i></a>
+          <a href="https://www.facebook.com/"><i class="material-icons white">facebook</i></a>
+          <a href="https://mail.google.com/"><i class="material-icons white">mail_outline</i></a>
+          <a href="#"><i class="material-icons white">phone</i></a>
+      </div>
+   </section>
+
+
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+   <script>
+     SmoothScroll({
+  animationTime: 1000,
+  stepSize: 100
+     });
+
+
+
+const topAnimate = document.querySelector('.top_animate');
+const header = document.querySelector('header');
+const buttons = document.querySelectorAll('.button');
+document.addEventListener('DOMContentLoaded', function () {
+  const buttonsA = document.querySelectorAll('[data-index]');
+
+  buttonsA.forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetIndex = this.getAttribute('data-index');
+      const targetSection = document.getElementById(`section${targetIndex}`);
+
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth',
+        });
+      }
+    });
+  });
+});
+
+
+window.addEventListener('scroll', function () {
+  const currentSection = getCurrentSection();
+
+  buttons.forEach(button => {
+    const sectionIndex = button.getAttribute('data-index');
+    const section = document.getElementById(`section${sectionIndex}`);
+    const rect = section.getBoundingClientRect();
+    if (window.scrollY >= topAnimate.offsetTop) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+      buttons.forEach(btn => btn.classList.remove('active'));
+    }
+    if (
+      rect.top <= window.innerHeight / 2 &&
+      rect.bottom >= window.innerHeight / 2
+    ) {
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    } else {
+      button.classList.remove('active');
+    }
+  });
+});
+
+function getCurrentSection() {
+  const sections = document.querySelectorAll('.section');
+
+  for (let i = 0; i < sections.length; i++) {
+    const rect = sections[i].getBoundingClientRect();
+    if (
+      rect.top <= window.innerHeight / 2 &&
+      rect.bottom >= window.innerHeight / 2
+    ) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const section1 = document.getElementById('section1');
+  const palalax = document.querySelector('.palalax');
+  let timeoutId;
+
+  // Добавляем класс "fade-in-element" к .palalax
+  palalax.classList.add('fade-in-element');
+
+  // Задержка в 2000 миллисекунд (2 секунды) перед началом эффекта параллакса
+  setTimeout(function () {
+    section1.addEventListener('mousemove', function (e) {
+      clearTimeout(timeoutId);
+
+      // Проверяем, появился ли элемент полностью
+      if (palalax.classList.contains('visible')) {
+        const rect = section1.getBoundingClientRect();
+        const offsetX = (e.clientX - rect.left) / rect.width - 0.5;
+        const offsetY = (e.clientY - rect.top) / rect.height - 0.5;
+
+        const moveX = -offsetX * 10;
+        const moveY = -offsetY * 10;
+
+        palalax.style.transition = 'transform 0.3s ease-out';
+        palalax.style.transform = `translate(${-offsetX * 100}px, ${-offsetY * 100}px)`;
+
+        section1.style.transition = 'background-position 0.3s ease-out';
+        section1.style.backgroundPosition = `${50 + moveX}% ${50 + moveY}%`;
+      }
+    });
+
+
+  section1.addEventListener('mouseleave', function () {
+    palalax.style.transition = 'transform 0.3s ease-out';
+    palalax.style.transform = 'translate(0, 0)';
+
+    section1.style.transition = 'background-position 0.3s ease-out';
+    section1.style.backgroundPosition = 'center';
+
+    timeoutId = setTimeout(function () {
+      palalax.style.transition = 'none';
+      section1.style.transition = 'none';
+    }, 300);
+  });
+  }, 2000);
+});
+
+
+
+
+
+
+
+
+
+
+//плавное появление//
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Получаем все элементы с классом "fade-in-element"
+  var elements = document.querySelectorAll(".fade-in-element");
+
+  // Функция для проверки видимости элемента
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top <= window.innerHeight && rect.bottom >= 0
+    );
+  }
+
+  // Функция для обработки события прокрутки
+  function handleScroll() {
+    elements.forEach(function (element) {
+      if (isElementInViewport(element)) {
+        // Добавляем задержку в 500 миллисекунд (0.5 секунд)
+        setTimeout(function () {
+          element.classList.add("visible");
+        }, 500);
+      }
+    });
+  }
+
+  // Добавляем обработчик события прокрутки
+  window.addEventListener("scroll", handleScroll);
+
+  // Вызываем обработчик события прокрутки сразу, чтобы показать видимые элементы
+  handleScroll();
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var button = document.getElementById('colorButton');
+
+  button.addEventListener('click', function() {
+    // Получаем все элементы с классом "changeable"
+    var elements = document.getElementsByClassName('changeable');
+
+    // Проходим по каждому элементу и меняем цвета
+    for (var i = 0; i < elements.length; i++) {
+      var currentBackgroundColor = elements[i].style.backgroundColor;
+      var currentColor = elements[i].style.color;
+
+      if (currentBackgroundColor === 'white') {
+        elements[i].style.backgroundColor = 'black';
+        elements[i].style.color = 'white';
+      } else {
+        elements[i].style.backgroundColor = 'white';
+        elements[i].style.color = 'black';
+      }
+    }
+  });
+});
+
+</script>
+</body>
+</html>
+
